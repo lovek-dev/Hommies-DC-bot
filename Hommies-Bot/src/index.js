@@ -60,6 +60,7 @@ process.on("unhandledRejection", async (err) => {
 });
 
 // LOGIN BOT
+console.log("🔑 Token Loaded:", process.env.TOKEN ? "✅ Yes" : "❌ No");
 client.login(process.env.TOKEN)
   .catch(err => {
     console.log("[CRUSH] Something went wrong while connecting to your bot\n");
